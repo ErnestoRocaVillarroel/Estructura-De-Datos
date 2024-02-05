@@ -1,0 +1,46 @@
+/**ecuacion cuadratica
+JORGE ERNESTO ROCA VILLARROEL**/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{ float a,b,c,d,e,f,g,h,x;
+   cout<<"ingrese su ecuación cuadrática"<<endl;
+   cout<<"x²: ";cin>>a;
+   cout<<"x: ";cin>>b;
+   cin>>c;
+   if (a==0)
+   {
+       cout<<"su operacion no es cuadrática, pero este es su resultado de x: ";
+       x=(c*(-1))/b;
+       cout<<x;
+   }
+   else
+   {
+       if((pow(b,2)-(4*a*c))==0)
+       {
+           cout<<"la solución única de x es: ";
+           d=(b*(-1))/(2*a);
+       }
+       else
+       {
+           if((pow(b,2)-(4*a*c))>0)
+           {
+               e=(-b)+(sqrt((pow(b,2)-(4*a*c))));
+               f=(-b)-(sqrt((pow(b,2)-(4*a*c))));
+               cout<<"su respuesta para x1 es: "<<e<<endl;
+               cout<<"su respuesta para x2 es: "<<f<<endl;
+           }
+           else
+           {
+               cout<<"el resultado es imaginario, pero estos son los resultados: "<<endl;
+               g=(-b)+(sqrt((((pow(b,2)-(4*a*c))*-1))));
+               h=(-b)-(sqrt((((pow(b,2)-(4*a*c))*-1))));
+               cout<<"x1: "<<g<<"i"<<endl;
+               cout<<"x2: "<<h<<"i"<<endl;
+           }
+       }
+   }
+    return 0;
+}
