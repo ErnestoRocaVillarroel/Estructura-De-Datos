@@ -1,0 +1,30 @@
+/******************************************************************************
+programa con recursividad para potencias
+autor:Jorge Ernesto Roca Villarroel
+fecha:21/2/2024
+version:1
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+float potencia(float n,int p);//se declara arriba y en la funcion para que se pueda usar en el código principal. La función principal se ve mejor de esta manera
+
+int main()
+{ float n; int p;
+    
+   cout<<"escriba la base: ";
+   cin>>n;
+   cout<<"escriba el exponente: ";
+   cin>>p;
+   cout<<"esta es su potencia: "<<potencia(n,p);//llama a la funcion y esta se declara arriba para la forma de prototipo:
+   return 0;
+}
+
+
+float potencia(float n,int p)
+{
+    if (p==0)
+     return 1;
+    else
+     return potencia(n,(p-1))*n;
+    
+}
