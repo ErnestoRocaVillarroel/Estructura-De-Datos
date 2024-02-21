@@ -1,0 +1,8 @@
+def pot_rec(n,p):
+    if p==0:
+        return 1
+    else:
+        return pot_rec(n,(p-1))*n
+z=pot_rec(5,2)
+print(z)
+    
