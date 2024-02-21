@@ -1,0 +1,28 @@
+/******************************************************************************
+programa con recursividad para fibonacci
+autor:Jorge Ernesto Roca Villarroel
+fecha:21/2/2024
+version:1
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+int fibonacci(int n);//se declara arriba y en la funcion para que se pueda usar en el código principal. La función principal se ve mejor de esta manera
+
+int main()
+{ float n;
+    
+   cout<<"escriba hasta donde mostrar la serie: ";
+   cin>>n;
+   cout<<"esta es su serie: "<<fibonacci(n);//llama a la funcion y esta se declara arriba para la forma de prototipo:
+   return 0;
+}
+
+
+int fibonacci(int n)
+{
+    if ((n==1)||(n==2))
+     return 1;//se puede modificar par mostrar el 0 en un inicio para la suma de fibonacci
+    else
+     return fibonacci(n-1)+fibonacci(n-2);
+    
+}
