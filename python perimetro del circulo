@@ -1,0 +1,6 @@
+print("perimetro de una circunferencia" )
+print("ingrese el radio de su circunferencia" )
+radio=input()
+perimetro=2*radio*3.1416
+print("este es su perimetro")
+print(perimetro)
