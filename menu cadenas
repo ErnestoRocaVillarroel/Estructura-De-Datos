@@ -1,0 +1,74 @@
+
+using namespace std;
+
+void main()
+{
+    int opcion;
+    string nombre,string1,string2,string3;
+    Cadenas can1;
+    do {
+        cout << endl;
+        cout << "1.- pedir un string" << endl;
+        cout << "2.- longitud" << endl;
+        cout << "3.- comparar" << endl;
+        cout << "4.- contar vocales " << endl;
+        cout << "5.- sacar un substring" << endl;
+        cout << "6.- encontrar un caracter" << endl;
+        cout << "7.- invertir" << endl;
+        cout << "8.- sacar vocales" << endl;
+        cout << "9.- palindromo" << endl;
+        cout << "0.- ninguna" << endl;
+        cout << "Elige una opción: ";
+        cin >> opcion;
+        switch (opcion) {
+        case 1: 
+            cin.ignore();
+            cout << "Ingresar un string: ";
+            getline(cin, nombre);
+            can1.set_cadena(nombre);
+        break;
+        case 2:
+            cout << can1.get_tamanio();
+        break;
+        case 3: cin.ignore();
+            cout << "ingrese 2 strings para comparar: " << endl;
+            cout << "string 1: ";
+            getline(cin, string1);
+            cin.ignore();
+            cout << "string 2: ";
+            getline(cin, string2);
+            if (can1.comparar(string1, string2))
+                cout << "Los string son iguales" << endl;
+            else
+                cout << "Los string no son iguales" << endl;; break;
+        case 4:; break;
+        case 5: break;
+        case 6:  break;
+        case 7:break;
+        case 8:
+            cin.ignore();
+            cout << "ingrese el string qu quieres sin  vocales: " << endl;
+            getline(cin, string3);
+            cout << "este es su string sin vocales: "<< can1.quitar_vocales(string3);
+        break;
+        case 9:  break;
+        case 0: cout << "Salir"; break;
+        default: cout << "Opcion invalida" << endl;
+        }
+        system("pause");
+        system("cls");
+        if ((opcion >= 1) && (opcion <= 4))
+            cout << "El resultado es " << endl;
+    } while (opcion != 0);
+    getch();
+}
+
+// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
+// Depurar programa: F5 o menú Depurar > Iniciar depuración
+
+// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
+//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
+//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
+//   4. Use la ventana Lista de errores para ver los errores
+//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
+//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
